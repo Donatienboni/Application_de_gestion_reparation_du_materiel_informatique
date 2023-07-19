@@ -73,8 +73,8 @@ def Supprimer():
     meConnect = maBase.cursor()
 
     try:
-        sql = "delete from clients where id= %s "
-        val = ( matricule)
+        sql = "delete from clients where id = %s"
+        val = ( matricule,)
         meConnect.execute(sql, val)
         maBase.commit()
         derniereMatricule = meConnect.lastrowid
@@ -135,35 +135,40 @@ root  = Tk()
 root.title("Cleint")
 root.geometry("1350x700+0+0")
 root.resizable(False, False)
-root.configure(background="#091821")
+root.configure(background="#646970")
 
 
 #Ajouter le titre
 lbltitre = Label(root,borderwidth = 3, relief = SUNKEN
-                 , text = "gestion reparation du materiel informatique", font = ("Sans Serif", 25), background = "#2F4F4F", fg="#FFFAFA")
-lbltitre.place(x = 0, y = 0, width = 1350, height=100)
+                 , text = "gestion reparation du materiel informatique", font = ("Sans Serif", 25), background = "#646970", fg="#fff")
+lbltitre.place(x = 0, y = 0, width = 1350, height=90)
+
+# titre de table
+lbltitre = Label(root,borderwidth = 3, relief = SUNKEN
+                 , text = "Table Materiel", font = ("Sans Serif", 15), background = "#646970", fg="#fff")
+lbltitre.place(x = 950, y = 260, width = 250, height=30)
 
 #Detail des eleves
 
 #Matricule
-lblNumero = Label(root, text="ID", font=("Arial", 18), bg="#091821", fg="white")
+lblNumero = Label(root, text="ID", font=("Arial", 18), bg="#646970", fg="white")
 lblNumero.place(x=0, y=100, width=150)
 txtNumero = Entry(root,bd=4, font=("Arial", 14))
 txtNumero.place(x=120,y=100,width=90)
 
 #Nom
-lblnom = Label(root, text="NOM", font=("Arial", 18), bg="#091821", fg="white")
+lblnom = Label(root, text="NOM", font=("Arial", 18), bg="#646970", fg="white")
 lblnom.place(x=0, y=150, width=150)
 txtnom = Entry(root,bd=4, font=("Arial", 14))
 txtnom.place(x=120,y=150,width=200)
 #email
-lblemail = Label(root, text="EMAIL", font=("Arial", 18), bg="#091821", fg="white")
+lblemail = Label(root, text="EMAIL", font=("Arial", 18), bg="#646970", fg="white")
 lblemail.place(x=0, y=200, width=150, )
 txtemail = Entry(root,bd=4, font=("Arial", 14))
 txtemail.place(x=120,y=200,width=200)
 
 #phone
-lblphone = Label(root, text="PHONE", font=("Arial", 18), bg="#091821", fg="white")
+lblphone = Label(root, text="PHONE", font=("Arial", 18), bg="#646970", fg="white")
 lblphone.place(x=0, y=250, width=150, )
 txtphone = Entry(root,bd=4, font=("Arial", 14))
 txtphone.place(x=120,y=250,width=200)
