@@ -67,7 +67,7 @@ def SupprimerMatereil():
 
     try:
         sql = "delete from materiels where id= %s "
-        val = (matricule)
+        val = (matricule,)
         meConnect.execute(sql, val)
         maBase.commit()
         derniereMatricule = meConnect.lastrowid
@@ -88,30 +88,30 @@ root  = Tk()
 root.title("Materiel")
 root.geometry("1350x700+0+0")
 root.resizable(False, False)
-root.configure(background="#091821")
+root.configure(background="#646970")
 
 
 #Ajouter le titre
 lbltitre = Label(root,borderwidth = 3, relief = SUNKEN
-                 , text = "gestion reparation du materiel informatique", font = ("Sans Serif", 25), background = "#2F4F4F", fg="#FFFAFA")
-lbltitre.place(x = 0, y = 0, width = 1350, height=100)
+                 , text = "gestion reparation du materiel informatique", font = ("Sans Serif", 25), background = "#646970", fg="#fff")
+lbltitre.place(x = 0, y = 0, width = 1350, height=90)
 
 #Detail des eleves
 
 #Matricule
-lblNumero = Label(root, text="ID", font=("Arial", 18), bg="#091821", fg="white")
+lblNumero = Label(root, text="ID", font=("Arial", 18), bg="#646970", fg="white")
 lblNumero.place(x=0, y=100, width=150)
 txtNumero = Entry(root,bd=4, font=("Arial", 14))
 txtNumero.place(x=120,y=100,width=90)
 
 #Nom
-lblnom = Label(root, text="NOM", font=("Arial", 18), bg="#091821", fg="white")
+lblnom = Label(root, text="NOM", font=("Arial", 18), bg="#646970", fg="white")
 lblnom.place(x=0, y=150, width=150)
 txtnom = Entry(root,bd=4, font=("Arial", 14))
 txtnom.place(x=120,y=150,width=200)
 
 #marque
-lblmarque = Label(root, text="MARQUE", font=("Arial", 18), bg="#091821", fg="white")
+lblmarque = Label(root, text="MARQUE", font=("Arial", 18), bg="#646970", fg="white")
 lblmarque.place(x=0, y=200, width=150)
 txtmarque = Entry(root,bd=4, font=("Arial", 14))
 txtmarque.place(x=120,y=200,width=200)
