@@ -130,35 +130,44 @@ root  = Tk()
 root.title("Reparation")
 root.geometry("1350x700+0+0")
 root.resizable(False, False)
-root.configure(background="#091821")
+root.configure(background="#646970")
 
 
 #Ajouter le titre
 lbltitre = Label(root,borderwidth = 3, relief = SUNKEN
-                 , text = "gestion reparation du materiel informatique", font = ("Sans Serif", 25), background = "#2F4F4F", fg="#FFFAFA")
-lbltitre.place(x = 0, y = 0, width = 1350, height=100)
+                 , text = "gestion reparation du materiel informatique", font = ("Sans Serif", 25), background = "#646970", fg="#fff")
+lbltitre.place(x = 0, y = 0, width = 1350, height=90)
+
+# titre de table materiels
+lbltitre = Label(root,borderwidth = 3, relief = SUNKEN
+                 , text = "Table Materiel", font = ("Sans Serif", 15), background = "#646970", fg="#fff")
+lbltitre.place(x = 1040, y = 260, width = 250, height=30)
+# titre de table
+lbltitre = Label(root,borderwidth = 3, relief = SUNKEN
+                 , text = "Table Client", font = ("Sans Serif", 15), background = "#646970", fg="#fff")
+lbltitre.place(x = 650, y = 260, width = 250, height=30)
 
 
 #Matricule
-lblNumero = Label(root, text="ID", font=("Arial", 18), bg="#091821", fg="white")
+lblNumero = Label(root, text="ID", font=("Arial", 18), bg="#646970", fg="white")
 lblNumero.place(x=0, y=100, width=150)
 txtNumero = Entry(root,bd=4, font=("Arial", 14))
 txtNumero.place(x=120,y=100,width=90)
 
 #Id_client
-lblId_client = Label(root, text="ID_CLIENT", font=("Arial", 18), bg="#091821", fg="white")
+lblId_client = Label(root, text="ID_CLIENT", font=("Arial", 18), bg="#646970", fg="white")
 lblId_client.place(x=0, y=150, width=150)
 txtId_client = Entry(root,bd=4, font=("Arial", 14))
 txtId_client.place(x=120,y=150,width=200)
 
 #Id_materiel
-lblId_materiel = Label(root, text="ID_MATERIEL", font=("Arial", 18), bg="#091821", fg="white")
+lblId_materiel = Label(root, text="ID_MATERIEL", font=("Arial", 18), bg="#646970", fg="white")
 lblId_materiel.place(x=0, y=200, width=150, )
 txtId_materiel = Entry(root,bd=4, font=("Arial", 14))
 txtId_materiel.place(x=120,y=200,width=200)
 
 #Date
-lblId_materiel = Label(root, text="DATE", font=("Arial", 18), bg="#091821", fg="white")
+lblId_materiel = Label(root, text="DATE", font=("Arial", 18), bg="#646970", fg="white")
 lblId_materiel.place(x=0, y=250, width=150, )
 txtDate = DateEntry(root,bd=4, font=("Arial", 14), background='#D2691E', foreground='black', date_pattern='yyyy/mm/dd')
 txtDate.pack()
